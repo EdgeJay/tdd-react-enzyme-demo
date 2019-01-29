@@ -17,6 +17,9 @@
     "enzyme",
     "ava"
   ],
+  "engines": {
+    "node": "10.14.0"
+  },
   "author": "Wu Huijie",
   "license": "ISC",
   "bugs": {
