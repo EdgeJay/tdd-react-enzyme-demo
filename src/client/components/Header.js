@@ -6,7 +6,6 @@ const Container = styled.header`
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  padding-top: 2rem;
 
   &::before {
     display: block;
