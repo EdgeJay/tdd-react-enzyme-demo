@@ -1,0 +1,26 @@
+{
+  "name": "tdd-react-enzyme-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Demonstration of using Enzyme to use TDD on React components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgejay/tdd-react-enzyme-demo.git"
+  },
+  "keywords": [
+    "tdd",
+    "react",
+    "enzyme",
+    "ava"
+  ],
+  "author": "Wu Huijie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edgejay/tdd-react-enzyme-demo/issues"
+  },
+  "homepage": "https://github.com/edgejay/tdd-react-enzyme-demo#readme"
+}
