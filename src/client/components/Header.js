@@ -6,18 +6,20 @@ const Container = styled.header`
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  padding-top: 2rem;
 
-  img {
-    flex: 300px;
+  &::before {
+    display: block;
+    content: '';
+    width: 30rem;
+    height: 20rem;
+    background: url(${pollImage}) no-repeat center;
+    background-size: cover;
   }
 `;
 
 function Header() {
-  return (
-    <Container>
-      <img src={pollImage} alt="Let's vote!" title="Let's vote!" />
-    </Container>
-  );
+  return <Container />;
 }
 
 export default Header;

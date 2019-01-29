@@ -19,6 +19,24 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'style-loader',
+            options: {
+              insertInto: () => document.querySelector('#base'),
+            },
+          },
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [path.resolve(__dirname, './src/client/styles')],
+            },
+          },
+        ],
+      },
+      {
         test: /\.js$/,
         loader: 'eslint-loader',
         enforce: 'pre',
