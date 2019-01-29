@@ -81,3 +81,5 @@ typings/
 
 # VS Code settings
 .vscode
+
+build
