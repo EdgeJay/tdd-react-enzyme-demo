@@ -53,11 +53,24 @@ module.exports = {
             // directory for faster rebuilds.
             cacheDirectory: true,
             plugins: [
+              'styled-components',
               '@babel/plugin-transform-react-jsx',
               '@babel/plugin-transform-runtime',
               '@babel/plugin-transform-spread',
               '@babel/proposal-object-rest-spread',
             ],
+          },
+        },
+      },
+      {
+        test: /\.(html|ico|png|jpg|jpeg|svg|gif|otf|ttf)$/,
+        include: [path.resolve(__dirname, 'src/client/assets')],
+        use: {
+          loader: 'file-loader',
+          options: {
+            context: path.resolve(__dirname, 'src/client/assets'),
+            publicPath: '/',
+            name: '[path][name].[ext]',
           },
         },
       },
