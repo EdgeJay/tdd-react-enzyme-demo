@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "description": "Demonstration of using Enzyme to use TDD on React components",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf ./build",
+    "build": "npm run clean && webpack",
+    "start": "webpack-dev-server",
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,39 @@
   "bugs": {
     "url": "https://github.com/edgejay/tdd-react-enzyme-demo/issues"
   },
-  "homepage": "https://github.com/edgejay/tdd-react-enzyme-demo#readme"
+  "homepage": "https://github.com/edgejay/tdd-react-enzyme-demo#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/plugin-transform-spread": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "@webpack-cli/init": "^0.1.3",
+    "ava": "^1.2.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.8.0",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  }
 }
