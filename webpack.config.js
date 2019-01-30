@@ -54,6 +54,10 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             babelrc: false,
+            // This is a feature of `babel-loader` for webpack (not Babel itself).
+            // It enables caching results in ./node_modules/.cache/babel-loader/
+            // directory for faster rebuilds.
+            cacheDirectory: true,
             presets: [
               [
                 '@babel/preset-env',
@@ -66,10 +70,6 @@ module.exports = {
               ],
               '@babel/preset-react',
             ],
-            // This is a feature of `babel-loader` for webpack (not Babel itself).
-            // It enables caching results in ./node_modules/.cache/babel-loader/
-            // directory for faster rebuilds.
-            cacheDirectory: true,
             plugins: [
               'styled-components',
               '@babel/plugin-transform-react-jsx',
