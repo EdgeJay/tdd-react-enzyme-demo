@@ -6,9 +6,8 @@ import colours from '../utils/colours';
 const Input = styled.input`
   text-align: center;
   color: black;
-  font-size: 1.8rem;
   background-color: white;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
   border-radius: 0.5rem;
   border: 1px solid ${colours.darkGrey};
 `;

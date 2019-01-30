@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const H2 = styled.h2`
+const H1 = styled.h1`
   text-align: center;
 `;
 
 function SectionTitle({ children }) {
-  return <H2>{children}</H2>;
+  return <H1>{children}</H1>;
 }
 
 SectionTitle.defaultProps = {
