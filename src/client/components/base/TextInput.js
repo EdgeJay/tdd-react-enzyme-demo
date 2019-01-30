@@ -12,16 +12,35 @@ const Input = styled.input`
   border: 1px solid ${colours.darkGrey};
 `;
 
-function TextInput({ placeholder }) {
-  return <Input placeholder={placeholder} />;
+class TextInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleTextChange = this.handleTextChange.bind(this);
+  }
+
+  handleTextChange(evt) {
+    const { onTextChanged } = this.props;
+    onTextChanged(evt.target.value);
+  }
+
+  render() {
+    const { placeholder, value } = this.props;
+    return (
+      <Input placeholder={placeholder} defaultValue={value} onChange={this.handleTextChange} />
+    );
+  }
 }
 
 TextInput.defaultProps = {
   placeholder: '',
+  value: '',
+  onTextChanged: () => {},
 };
 
 TextInput.propTypes = {
   placeholder: PropTypes.string,
+  value: PropTypes.string,
+  onTextChanged: PropTypes.func,
 };
 
 export default TextInput;
