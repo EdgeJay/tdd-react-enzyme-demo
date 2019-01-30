@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import colours from '../utils/colours';
+import colours from '../../utils/colours';
 
 const Input = styled.input`
   text-align: center;
