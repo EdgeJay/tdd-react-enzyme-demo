@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import pollImage from '../assets/img/poll.jpg';
+import pollImage from '../../assets/img/poll.jpg';
 
 const Container = styled.header`
   display: flex;
