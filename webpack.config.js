@@ -13,7 +13,7 @@ module.exports = {
     main: './src/client/index.js',
   },
   output: {
-    path: path.resolve(__dirname, './build/js'),
+    path: path.resolve(__dirname, './build'),
     filename: `[name]${inDevelopmentMode ? '' : '.min'}.js`,
   },
   module: {
