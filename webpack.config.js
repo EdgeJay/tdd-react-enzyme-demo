@@ -7,6 +7,17 @@ dotenv.config();
 
 const inDevelopmentMode = process.env.NODE_ENV === 'development';
 
+function setupResolve() {
+  if (inDevelopmentMode) {
+    return {
+      alias: {
+        'react-dom': '@hot-loader/react-dom',
+      },
+    };
+  }
+  return {};
+}
+
 module.exports = {
   target: 'web',
   mode: process.env.NODE_ENV,
@@ -107,4 +118,5 @@ module.exports = {
     port: 3000,
     hot: true,
   },
+  resolve: setupResolve(),
 };
