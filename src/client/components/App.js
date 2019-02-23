@@ -1,4 +1,5 @@
 import React from 'react';
+import { hot } from 'react-hot-loader/root';
 import styled from 'styled-components';
 import Header from './base/Header';
 import RegisterSection from './RegisterSection';
@@ -18,4 +19,4 @@ function App() {
   );
 }
 
-export default App;
+export default hot(App);

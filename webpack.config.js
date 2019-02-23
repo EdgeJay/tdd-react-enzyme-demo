@@ -1,5 +1,6 @@
 const path = require('path');
 const dotenv = require('dotenv');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 dotenv.config();
@@ -76,6 +77,7 @@ module.exports = {
               '@babel/plugin-transform-runtime',
               '@babel/plugin-transform-spread',
               '@babel/proposal-object-rest-spread',
+              'react-hot-loader/babel',
             ],
           },
         },
@@ -99,8 +101,10 @@ module.exports = {
       title: 'TDD with React + Enzyme Demo',
       template: './src/client/templates/index.html',
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
     port: 3000,
+    hot: true,
   },
 };
