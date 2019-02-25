@@ -3,9 +3,14 @@ const dotenv = require('dotenv');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-dotenv.config();
+const nodeEnvAlreadyDefined = !!process.env.NODE_ENV;
 
-const inDevelopmentMode = process.env.NODE_ENV === 'development';
+let inDevelopmentMode = false;
+
+if (!nodeEnvAlreadyDefined) {
+  dotenv.config();
+  inDevelopmentMode = process.env.NODE_ENV === 'development';
+}
 
 function setupResolve() {
   if (inDevelopmentMode) {
