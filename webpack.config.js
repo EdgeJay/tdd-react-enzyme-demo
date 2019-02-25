@@ -31,7 +31,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './build'),
-    filename: `[name]${inDevelopmentMode ? '' : '.min'}.js`,
+    publicPath: '/',
+    filename: `assets/js/[name]${inDevelopmentMode ? '' : '.min'}.js`,
   },
   module: {
     rules: [
@@ -106,7 +107,7 @@ module.exports = {
           options: {
             context: path.resolve(__dirname, 'src/client/assets'),
             publicPath: '/',
-            name: '[path][name].[ext]',
+            name: 'assets/[path][name].[ext]',
           },
         },
       },
