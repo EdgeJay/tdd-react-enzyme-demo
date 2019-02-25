@@ -32,7 +32,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './build'),
     publicPath: '/',
-    filename: `assets/js/[name]${inDevelopmentMode ? '' : '.min'}.js`,
+    filename: `assets/js/[name]${inDevelopmentMode ? '.bundle' : 'bundle.min'}.js`,
+    chunkFilename: `assets/js/[name]${inDevelopmentMode ? '.bundle' : 'bundle.min'}.js`,
   },
   module: {
     rules: [
@@ -94,6 +95,7 @@ module.exports = {
               '@babel/plugin-transform-runtime',
               '@babel/plugin-transform-spread',
               '@babel/proposal-object-rest-spread',
+              '@babel/plugin-syntax-dynamic-import',
               'react-hot-loader/babel',
             ],
           },

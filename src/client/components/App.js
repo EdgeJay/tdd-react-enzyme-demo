@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { setConfig } from 'react-hot-loader';
 import { hot } from 'react-hot-loader/root';
 import styled from 'styled-components';
 import Header from './base/Header';
 import RegisterSection from './RegisterSection';
-import ResultSection from './ResultSection';
+
+const ResultSection = lazy(() => import(/* webpackChunkName: "resultSection" */ './ResultSection'));
 
 setConfig({ logLevel: 'debug', ignoreSFC: false });
 
@@ -17,7 +18,9 @@ function App() {
     <Container>
       <Header />
       <RegisterSection />
-      <ResultSection />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ResultSection />
+      </Suspense>
     </Container>
   );
 }
